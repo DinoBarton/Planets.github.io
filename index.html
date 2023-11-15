@@ -1,27 +1,36 @@
 <html>
   <head>
-    <style>@keyframes space-float {
-  0% {
-    transform: translateY(0) translateX(0);
-  }
-  50% {
-    transform: translateY(-100px) translateX(100px);
-  }
-  100% {
-    transform: translateY(0) translateX(0);
-  }
-}
-
-.space-gif {
+    <style>.space-gif {
   position: absolute;
   top: 0;
   left: 0;
+  width: 100px;
+  height: 100px;
   background-image: url('space.gif');
   background-size: contain;
   background-position: center;
-  animation: space-float 20s linear infinite;
+  animation: space-bounce 5s ease-in-out infinite;
 }
 
+@keyframes space-bounce {
+  0% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(50px);
+  }
+  40% {
+    transform: translateY(0);
+  }
+  60% {
+    transform: translateY(-50px);
+  }
+  80% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }</style>
   </head>
   <body>
